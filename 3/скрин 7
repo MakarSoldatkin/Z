@@ -1,0 +1,21 @@
+x='n457n5yyyyyyyysrtyn54'
+def password(x):
+    cnd=0
+    cndb=0
+    ball=0
+    if len(x) > 15 :
+        ball+=1
+    for i in range(len(x)):
+        if x[i].isdigit()==True:
+            cnd+=1
+        if x[i].isalpha()==True:
+            cndb+=1
+    if cnd>5 and cndb>5:
+        ball+=1
+    if len(x)-(cnd+cndb)>5:
+        ball+=1
+    for i in range(len(x)):
+        if ord(x[i])>126:
+            ball+=1
+    print(ball)
+password(x)
