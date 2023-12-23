@@ -1,0 +1,17 @@
+print('.-','камень',',-','ножницы','/-','бумага')
+x=','
+y='.'
+def knb(x,y):
+    if ord(x) == ord(y):
+        print('ничья')
+    else:
+        if y=='/' and x == ',':
+            print('x',1)
+        elif x=='/' and y == ',':
+            print('y',2)
+        else:
+            if ord(x)<ord(y):
+                print('y',3)
+            elif ord(y)<ord(x):
+                print('x',4)
+knb(x,y)
