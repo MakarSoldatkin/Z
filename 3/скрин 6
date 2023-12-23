@@ -1,0 +1,10 @@
+x='11.43pm'
+y='11.43am'
+def wrem(x):
+    if x[-2:]=='am':
+        print(x[:2],x[2:-2])
+    else:
+        f=int(x[:2])
+        f+=12
+        print(f,x[2:-2])
+wrem(x)
