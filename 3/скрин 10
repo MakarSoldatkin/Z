@@ -1,0 +1,16 @@
+m=[1,6,1,6,1,6]
+cnd=0
+def b(m):
+    cnd=0
+    sa=sum(m)//3
+    if sum(m) %3!=0:
+        pass
+    else:
+        for i in range(len(m)):
+            if m[i]>sa:
+                cnd+=1
+            if cnd ==0:
+                cnd+=1
+        if cnd!=0:
+            print('Да')
+b(m)
