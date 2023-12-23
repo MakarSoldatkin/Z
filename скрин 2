@@ -1,0 +1,32 @@
+x='ewug??????buwbfwhf??????'
+def r(x):
+    cnd = 0
+    cnd1 = 0
+    x = list(reversed(x))
+    for i in range(len(x)):
+        if x[i] == '!':
+            cnd+=1
+        elif x[i] == '?':
+           cnd1+=1
+        elif x[i]!='!' and x[i]!='?':
+           break
+    if cnd != 0 and cnd1!=0:
+        for i in range(len(x)):
+            if x[i]!='!'and x[i]!='?':
+                ind=i
+                break
+        n=x[ind:]
+        n.append('!?')
+        n = ''.join(n)
+        print(n)
+    else:
+        m = '!'*cnd
+        m1 = '?'*cnd1
+        x = list(reversed(x))
+        x = ''.join(x)
+        if cnd1!=0:
+            x = x.replace(m1, '?')
+        if cnd!=0:
+            x = x.replace(m,'!')
+        print(x)
+r(x)
