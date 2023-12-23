@@ -1,0 +1,11 @@
+a='auegdsayfeyb aydayefed'#a=4,e=3
+a=list(a)
+m=[]
+for i in range(len(a)):
+    if a[i]=='a':
+        m.append('4')
+    elif a[i]=='e':
+        m.append('3')
+    else:
+        m.append(a[i])
+print(''.join(m))
